@@ -1,0 +1,107 @@
+body{
+    font-size: 34px;
+}
+.container{
+    padding: 50px 0;
+}
+.table{
+    
+    text-align: center;
+}
+.table td{
+    vertical-align: middle;
+    width: 300px;
+    height: 100px;
+    border: cadetblue 1px solid;
+}
+
+select, input{
+    width: 250px;
+    height: 50px;
+    margin: 10px 20px;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;
+}
+label{
+    width: 250px;
+    font-size: 24px;
+    padding-left: 20px;
+}
+.block, .popup_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: cadetblue 1px solid;   
+    cursor: pointer; 
+}
+.block > p, .popup_block > p {
+    margin: 0;
+}
+.inputs{
+    align-items: center;
+}
+.popup_background{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    opacity: 0.6;
+    background-color: gray;
+    width: 100vw;
+    height: 100vh;
+}
+.popup_container{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+}
+.popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* крестик */
+
+.close {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    position: absolute;
+    top: -19px;
+    right: 5px;    
+    z-index: 13;
+    margin: 20px auto;
+    cursor: pointer;
+}
+.close:before {
+    content: '+';
+    color: #000;
+    position: absolute;
+    z-index: 32;
+    transform: rotate(45deg);
+    font-size: 50px;
+    line-height: 1;
+    top: -5px;
+    left: 6px;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+}
+
+.close:hover:after {
+    transform: scale(1);
+}
+.close:hover:before {
+    transform: scale(0.8) rotate(45deg);
+    color: rgb(43, 65, 134);
+}
+
